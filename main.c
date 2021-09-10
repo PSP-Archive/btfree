@@ -5,7 +5,6 @@
 #include <string.h>
 #include <stdio.h>
 
-
 PSP_MODULE_INFO("btfree", 0x1000, 0, 0);
 
 
@@ -52,6 +51,7 @@ btDeviceInfo;
 
 u32 patchAddresses_620[] = { 0x000095A4, 0x000094A8, 0x000094D4 };
 u32 patchAddresses_63x[] = { 0x00013E00, 0x00013D04, 0x00013D30 };
+u32 patchAddresses_66x[] = { 0x00013E3C, 0x00013D40, 0x00013D6C };
 u32* patchAddresses = NULL;
 
 
@@ -214,6 +214,11 @@ int module_start(SceSize args, void* argp)
 		case 0x06030510:
 			patchAddresses = patchAddresses_63x;
 			break;
+
+		case 0x06060010:
+		case 0x06060110:
+			patchAddresses = patchAddresses_66x;
+			break;		
 	}
 
 	if (patchAddresses)
