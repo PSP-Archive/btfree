@@ -1,1 +1,1 @@
-   .set noreorder #include "pspstub.s"    STUB_START   "InterruptManagerForKernel",0x00010011,0x00010005    STUB_FUNC   0x8B61808B,sceKernelQuerySystemCall   STUB_END 
+   .set noreorder #include "pspstub.s"    STUB_START   "InterruptManagerForKernel",0x00010011,0x00020005    STUB_FUNC   0x8B61808B,sceKernelQuerySystemCall   STUB_FUNC   0x399FF74C,sceKernelQuerySystemCall63x   STUB_END 
