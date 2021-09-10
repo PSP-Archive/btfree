@@ -1,5 +1,5 @@
 TARGET = btfree
-OBJS = main.o
+OBJS = main.o interruptman.o
 
 INCDIR = ../include
 CFLAGS = -Os -G0 -Wall -fno-pic

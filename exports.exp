@@ -6,4 +6,12 @@ PSP_EXPORT_FUNC(module_stop)
 PSP_EXPORT_VAR(module_info)
 PSP_EXPORT_END
 
+PSP_EXPORT_START(btfree, 0, 0x4001)
+PSP_EXPORT_FUNC(bluetooth_plugin_module_sub_09498_hook)
+PSP_EXPORT_END
+
+PSP_EXPORT_START(btfree_driver, 0, 0x0001)
+PSP_EXPORT_FUNC(bluetooth_plugin_module_sub_09498_hook)
+PSP_EXPORT_END
+
 PSP_END_EXPORTS
